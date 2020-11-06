@@ -50,6 +50,9 @@ group :development do
   gem "binding_of_caller"
 end
 
+#Add pry-rails  
+gem 'pry-rails', :group => :development
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
