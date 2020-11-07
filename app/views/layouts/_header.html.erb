@@ -22,6 +22,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Nunc</a>
                 </li>
+                <li class="nav-item">
+                    <% if user_signed_in? %>
+                        <a class="nav-link"><%= "Welcome back, #{current_user.username}" %></a>
+                        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+                    <% else %>
+                        <%= link_to "Sign in", new_user_session_path %>
+                        <%= link_to "Sign up", new_user_registration_path %>
+                    <% end %>
+                </li> 
             </ul>
         </div>
     </nav>
