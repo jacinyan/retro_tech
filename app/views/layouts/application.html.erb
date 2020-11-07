@@ -13,7 +13,7 @@
   </head>
 
   <body>
-  
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <header>
@@ -21,7 +21,7 @@
     </header>
     
     <main role="main">
-    <%= content_for?(:content) ? yield(:content) : yield %>
+      <%= content_for?(:content) ? yield(:content) : yield %>
     </main>
 
     <footer>
