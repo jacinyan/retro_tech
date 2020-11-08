@@ -35,13 +35,15 @@ end
 
 #Add pry-rails  
 gem 'pry-rails', :group => :development
-
 # Add the pry-byebug globally
 gem 'pry-byebug'
 # Add the devise for authentication
 gem 'devise'
+# Add the rails_admin for authorisation
+gem 'rails_admin', '~> 2.0'
 # Add the cancancan for authorisation
 gem 'cancancan'
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -53,7 +55,9 @@ group :development do
   # Note: If you discover that Better Errors isn't working - particularly after upgrading from version 0.5.0 or less - be sure to set config.consider_all_requests_local = true in config/environments/development.rb.
   gem "better_errors"
   gem "binding_of_caller"
-end#Add pry-rails  
+end
+
+#Add pry-rails  
 gem 'pry-rails', :group => :development
 
 group :test do
