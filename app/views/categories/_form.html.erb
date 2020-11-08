@@ -1,0 +1,13 @@
+<table summary="Category form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td>
+          <%= f.radio_button(:status, "1") %> Valid
+          <%= f.radio_button(:status, "0") %> Invalid
+        </td>
+      </tr>    
+</table>
