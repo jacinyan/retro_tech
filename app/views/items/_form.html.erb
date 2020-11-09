@@ -1,0 +1,27 @@
+<table summary="item form fields">
+    <tr>
+        <th>Category ID</th>
+        <td><%= f.select(:category_id, Category.all.map {|c| [c.name, c.id]}) %></td>
+    </tr>
+    <tr>
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>In-stock</th>
+        <td>
+          <%= f.radio_button(:in_stock, "1") %> Valid
+          <%= f.radio_button(:in_stock, "0") %> Invalid
+        </td>
+      </tr>   
+      <tr>
+        <th>Price</th>
+        <td><%= f.text_field(:price) %> </td>
+      </tr> 
+      <tr>
+        <th>description</th>
+        <td><%= f.text_area(:description, :rows => 10, :cols => 60) %></td>
+      </tr>  
+</table>
+

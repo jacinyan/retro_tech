@@ -1,0 +1,15 @@
+<%= link_to("<< Back to List", items_path, :class => 'back-link') %>
+
+<div class="items edit">
+  <h2>Updates item</h2>
+
+  <%= form_for(@item) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update item") %>
+    </div>
+
+  <% end %>
+</div>

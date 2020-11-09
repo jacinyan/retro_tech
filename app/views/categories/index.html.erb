@@ -14,7 +14,7 @@
       <td class="actions">
         <%= link_to("Show", category_path(category), :class => 'action show') %>
         <%= link_to("Edit", edit_category_path(category), :class => 'action edit') %>
-        <%= link_to("Delete", delete_category_path(category), :class => 'action delete') %>
+        <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
     <% end %>

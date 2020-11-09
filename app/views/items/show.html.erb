@@ -1,0 +1,21 @@
+<%= link_to("<< Back to List", items_path, :class => 'back-link') %>
+
+<div class="subjects show">
+  <h2>Show item</h2>
+
+  <table summary="Subject detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @item.name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @item.created_at.to_s(:long) %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @item.updated_at.strftime("%m/%d/%Y %I:%M %p") %></td>
+    </tr>
+  </table>
+
+</div>
